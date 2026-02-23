@@ -12,7 +12,7 @@ elif indice == 2:
   impares = 0
   num = int(input())
 
-  while num > 0:
+  while num >= 0:
     if num % 2 == 0:
       pares = pares + 1
     else:
@@ -32,6 +32,7 @@ elif indice == 3:
     valorfeira = valorfeira + peso
   if valorfeira > capacidade:
     print("Fim de feira: levo tudo menos o último item.")
+    valorfeira = valorfeira - peso
   elif valorfeira == capacidade:
     print("Fim de feira: levo tudo mas não cabe mais nada")
 
@@ -59,16 +60,15 @@ elif indice == 5:
   
 elif indice == 6:
   num_pares = 0
-  somapares = 0
-
-  while somapares != -2:
+  par1 = int(input())
+  par2 = int(input())
+  
+  while par1 != -1 and par2 != -1:
+    if par1 == par2:
+      num_pares = num_pares + 1
+  
     par1 = int(input())
     par2 = int(input())
-
-    if par1 == par2 and par1 != -1 and par2 != -1:
-      num_pares = num_pares + 1
-
-    somapares = par1 + par2
 
   print(num_pares)
 
@@ -77,7 +77,8 @@ elif indice == 7:
   p = input()
 
   while p != 'fim':
-    qtdepao = qtdepao + 1
+    if p == 'pao':
+      qtdepao = qtdepao + 1
     p = input()
 
   print(qtdepao)
