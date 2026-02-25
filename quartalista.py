@@ -9,9 +9,8 @@ if indice == 1:
 elif indice == 2:
   n = int(input())
 
-  for i in range(n):
-    num = i + 1
-    print (num)
+  for i in range(1, n + 1):
+    print (i)
 
 elif indice == 3:
   n = int(input())
